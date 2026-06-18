@@ -67,6 +67,7 @@ function Home() {
         <Expectations />
         <Team />
         <Testimonials />
+        <FounderNote />
         <Authority />
         <Faq />
       </main>
@@ -96,9 +97,9 @@ function Hero() {
 
         {/* Headline */}
         <h1 className="font-display text-[2.05rem] font-extrabold leading-[1.08] tracking-[-0.02em] text-navy sm:text-[2.4rem]">
-          Servicii medicale la
+          Pentru cineva drag,
           <br />
-          domiciliu, cu{" "}
+          îngrijire medicală acasă, cu{" "}
           <span className="relative whitespace-nowrap">
             calm
             <svg
@@ -121,8 +122,8 @@ function Hero() {
 
         {/* Subhead */}
         <p className="mt-4 text-[15.5px] leading-[1.5] text-ink-muted">
-          Venim acasă la tine și îți confirmăm costul și pașii{" "}
-          <span className="font-semibold text-navy">înainte</span> să ajungă echipa.
+          Te ghidăm la telefon și îți confirmăm costul și pașii{" "}
+          <span className="font-semibold text-navy">înainte</span> ca echipa să ajungă la ușă.
         </p>
 
         {/* Hero photo */}
@@ -235,7 +236,7 @@ function TrustStrip() {
               4,9 / 5 pe Google · 119 recenzii
             </p>
             <p className="truncate text-[11.5px] text-white/70">
-              Recenzii verificate independent prin Verifeedo
+              Recenzii publice, verificabile pe Google
             </p>
           </div>
         </div>
@@ -404,6 +405,10 @@ function ServicePillars() {
                   {name}
                 </h3>
                 <p className="mt-1 text-[12.5px] text-ink-muted">{sub}</p>
+                <p className="mt-2 inline-flex items-center gap-1 rounded-full bg-success/15 px-2 py-0.5 text-[11px] font-semibold text-navy">
+                  <CheckCircle2 className="h-3 w-3 text-success" strokeWidth={2.5} />
+                  Consumabile + deplasare incluse
+                </p>
               </div>
               <div className="mt-auto flex items-center justify-between gap-2 border-t border-hairline pt-3">
                 <span className="text-[13px] font-semibold text-brand-deep">
@@ -522,7 +527,7 @@ function Team() {
       img: teamNurse1,
       name: "Simona",
       role: "Asistentă șefă · 9 ani la domiciliu",
-      quote: "„Vin cu calm. Pacientul simte asta primul.”",
+      quote: "„Explic ce urmează să fac, pas cu pas. Oamenii se liniștesc când înțeleg.”",
     },
     {
       img: teamNurse2,
@@ -674,6 +679,44 @@ function Testimonials() {
 /*  AUTHORITY — institutional credentials, discreet                    */
 /* ------------------------------------------------------------------ */
 function Authority() {
+  return AuthorityBody();
+}
+
+/* ------------------------------------------------------------------ */
+/*  FOUNDER NOTE — ethical positioning, key differentiator             */
+/* ------------------------------------------------------------------ */
+function FounderNote() {
+  return (
+    <section
+      aria-labelledby="founder-heading"
+      className="mx-auto max-w-2xl px-4 py-10"
+    >
+      <div className="rounded-2xl border border-hairline bg-surface p-5">
+        <p className="mb-2 text-[11.5px] font-semibold uppercase tracking-[0.14em] text-brand-deep">
+          Mesaj de la fondator
+        </p>
+        <h2
+          id="founder-heading"
+          className="font-display text-[1.4rem] font-extrabold leading-tight text-navy"
+        >
+          Nu îți vindem un serviciu de care nu ai nevoie.
+        </h2>
+        <p className="mt-3 text-[14px] leading-relaxed text-ink-muted">
+          Am pornit MediSafe în 2017 pentru oamenii care, ca mine, au avut un
+          părinte de îngrijit acasă și nu știau de unde să înceapă. De atunci,
+          regula e simplă: dacă o procedură nu e potrivită pentru cazul tău,
+          îți spunem direct, chiar dacă pierdem o programare. Răspunderea
+          rămâne pe numele meu — și pe al echipei pe care o trimit la ușa ta.
+        </p>
+        <p className="mt-3 text-[13px] font-semibold text-navy">
+          — Fondator MediSafe
+        </p>
+      </div>
+    </section>
+  );
+}
+
+function AuthorityBody() {
   const items = [
     "Colegiul Medicilor din România",
     "Direcția de Sănătate Publică",
