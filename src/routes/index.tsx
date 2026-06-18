@@ -686,6 +686,10 @@ function Authority() {
     "OAMGMAMR",
     "ANPC — SAL/SOL",
   ];
+  return AuthorityImpl(items);
+}
+
+function AuthorityImpl(items: string[]) {
   return (
     <section
       aria-labelledby="auth-heading"
