@@ -252,18 +252,18 @@ function Steps() {
   const steps = [
     {
       n: "01",
-      title: "Suni și ne spui ce se întâmplă",
-      body: "Cu cuvintele tale: ce simptome are pacientul, ce a recomandat medicul sau, pur și simplu, ce nu înțelegi. Te ascultăm fără grabă, chiar dacă nu știi încă ce serviciu îți trebuie.",
+      title: "Ne spui nevoia pacientului",
+      body: "Serviciul dorit, zona din București sau Ilfov și eventualele recomandări medicale.",
     },
     {
       n: "02",
-      title: "Îți spunem clar ce se poate face acasă",
-      body: "În același apel: dacă procedura e potrivită pentru cazul tău, cine vine, când poate ajunge și cât costă totul — confirmat înainte să decizi ceva.",
+      title: "Confirmăm telefonic costul și ora",
+      body: "Știi exact ce urmează înainte să fie programată vizita — fără surprize la final.",
     },
     {
       n: "03",
-      title: "Te sunăm înainte să ajungem la ușă",
-      body: "Asistenta îți dă un telefon scurt înainte de sosire. Vine cu tot ce trebuie — consumabile, echipament și ecuson de identificare.",
+      title: "Echipa vine acasă la tine",
+      body: "Te anunțăm telefonic înainte să ajungă. Venim cu toate consumabilele incluse în preț.",
     },
   ];
   return (
@@ -282,8 +282,8 @@ function Steps() {
           Ce se întâmplă după ce suni
         </h2>
         <p className="mt-2 text-[14.5px] leading-relaxed text-ink-muted">
-          Nu trebuie să știi exact ce serviciu îți trebuie. Ne suni, ne spui ce
-          se întâmplă, și clarificăm împreună pașii — în același apel.
+          Îți explicăm pe scurt ce se poate face acasă, ce trebuie pregătit și
+          când poate ajunge echipa.
         </p>
       </header>
 
@@ -311,18 +311,20 @@ function Steps() {
                 />
               )}
             </li>
+            {i === 1 && (
+              <li className="list-none py-1">
+                <a
+                  href="#tarife"
+                  className="flex items-center justify-center gap-2 text-[13.5px] font-semibold text-brand-deep underline-offset-4 hover:underline"
+                >
+                  Vezi toate tarifele și costurile
+                  <ArrowRight className="h-4 w-4" />
+                </a>
+              </li>
+            )}
           </Fragment>
         ))}
       </ol>
-
-      {/* Reassurance footer — addresses the caregiver's silent worry */}
-      <p className="mt-5 flex items-start gap-2 rounded-2xl border border-hairline bg-secondary/40 px-4 py-3 text-[13px] leading-relaxed text-navy/85">
-        <ShieldCheck className="mt-0.5 h-4 w-4 shrink-0 text-brand-deep" strokeWidth={2.25} />
-        <span>
-          Dacă, după ce te ascultăm, vedem că nu e cazul să venim, îți spunem
-          direct și te îndrumăm — fără să te împingem să programezi ceva.
-        </span>
-      </p>
     </section>
   );
 }
