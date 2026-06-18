@@ -1,10 +1,35 @@
 import { MessageCircle, Phone } from "lucide-react";
+import { useEffect, useState } from "react";
 import { PHONE_TEL, WHATSAPP_HREF } from "./data";
+import { cn } from "@/lib/utils";
 
-export function StickyBottomBar() {
+export function StickyBottomBar({ watchSelector = "#hero-primary-cta" }: { watchSelector?: string }) {
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const target = document.querySelector(watchSelector);
+    if (!target) {
+      // Fallback: show once user scrolls past ~600px
+      const onScroll = () => setVisible(window.scrollY > 600);
+      window.addEventListener("scroll", onScroll, { passive: true });
+      onScroll();
+      return () => window.removeEventListener("scroll", onScroll);
+    }
+    const io = new IntersectionObserver(
+      ([entry]) => setVisible(!entry.isIntersecting),
+      { threshold: 0, rootMargin: "0px 0px -10px 0px" },
+    );
+    io.observe(target);
+    return () => io.disconnect();
+  }, [watchSelector]);
+
   return (
     <div
-      className="fixed inset-x-0 bottom-0 z-30 border-t border-hairline bg-surface/95 backdrop-blur-md"
+      aria-hidden={!visible}
+      className={cn(
+        "fixed inset-x-0 bottom-0 z-30 border-t border-hairline bg-surface/95 backdrop-blur-md transition-all duration-300",
+        visible ? "translate-y-0 opacity-100" : "pointer-events-none translate-y-full opacity-0",
+      )}
       style={{ paddingBottom: "max(env(safe-area-inset-bottom), 0px)" }}
     >
       <div className="mx-auto flex max-w-2xl items-stretch gap-2 px-3 py-2.5">

@@ -173,6 +173,7 @@ function Hero() {
           </a>
           <a
             href={`tel:${PHONE_TEL}`}
+            id="hero-primary-cta"
             className="group relative flex w-full items-center justify-center gap-2 overflow-hidden rounded-full bg-navy px-5 py-4 text-[15.5px] font-semibold text-white shadow-[0_18px_36px_-18px_oklch(0.24_0.06_252/0.6)] transition-transform active:scale-[0.99]"
           >
             <span
