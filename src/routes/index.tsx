@@ -679,6 +679,44 @@ function Testimonials() {
 /*  AUTHORITY — institutional credentials, discreet                    */
 /* ------------------------------------------------------------------ */
 function Authority() {
+  return AuthorityBody();
+}
+
+/* ------------------------------------------------------------------ */
+/*  FOUNDER NOTE — ethical positioning, key differentiator             */
+/* ------------------------------------------------------------------ */
+function FounderNote() {
+  return (
+    <section
+      aria-labelledby="founder-heading"
+      className="mx-auto max-w-2xl px-4 py-10"
+    >
+      <div className="rounded-2xl border border-hairline bg-surface p-5">
+        <p className="mb-2 text-[11.5px] font-semibold uppercase tracking-[0.14em] text-brand-deep">
+          Mesaj de la fondator
+        </p>
+        <h2
+          id="founder-heading"
+          className="font-display text-[1.4rem] font-extrabold leading-tight text-navy"
+        >
+          Nu îți vindem un serviciu de care nu ai nevoie.
+        </h2>
+        <p className="mt-3 text-[14px] leading-relaxed text-ink-muted">
+          Am pornit MediSafe în 2017 pentru oamenii care, ca mine, au avut un
+          părinte de îngrijit acasă și nu știau de unde să înceapă. De atunci,
+          regula e simplă: dacă o procedură nu e potrivită pentru cazul tău,
+          îți spunem direct, chiar dacă pierdem o programare. Răspunderea
+          rămâne pe numele meu — și pe al echipei pe care o trimit la ușa ta.
+        </p>
+        <p className="mt-3 text-[13px] font-semibold text-navy">
+          — Fondator MediSafe
+        </p>
+      </div>
+    </section>
+  );
+}
+
+function AuthorityBody() {
   const items = [
     "Colegiul Medicilor din România",
     "Direcția de Sănătate Publică",
