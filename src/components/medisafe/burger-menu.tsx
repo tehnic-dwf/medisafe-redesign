@@ -274,18 +274,6 @@ export function BurgerMenu() {
                 <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-ink-muted" />
                 <span>P-ța Națiunile Unite nr. 3–5, Sector 4, București</span>
               </div>
-              <div className="mt-4 border-t border-hairline pt-3 text-[11.5px] leading-relaxed text-ink-muted">
-                <p>
-                  © {new Date().getFullYear()} Vital Medical Concept SRL · CUI
-                  RO 38173670
-                </p>
-                <a
-                  href="#"
-                  className="mt-1 inline-block font-semibold text-brand-deep underline-offset-4 hover:underline"
-                >
-                  Confidențialitate
-                </a>
-              </div>
             </section>
           </div>
 
