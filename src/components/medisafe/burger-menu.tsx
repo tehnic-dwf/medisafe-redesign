@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ChevronDown, ChevronRight, Menu, Phone, Sparkles, X } from "lucide-react";
+import { ChevronDown, ChevronRight, Menu, Phone, Sparkles, Tag, X } from "lucide-react";
 import {
   Sheet,
   SheetContent,
@@ -90,6 +90,21 @@ export function BurgerMenu() {
 
             {/* All service categories - accordion */}
             <section aria-labelledby="services-heading" className="mb-6">
+              {/* Tarife / Costuri - distinct accent link, mirrors promo styling */}
+              <a
+                href="#tarife"
+                className="mb-4 flex items-center justify-between gap-3 rounded-2xl bg-gradient-to-br from-navy to-navy-soft px-4 py-3.5 text-[15px] font-semibold text-white shadow-sm transition-transform active:scale-[0.99]"
+              >
+                <span className="flex items-center gap-2.5">
+                  <span className="inline-flex items-center gap-1 rounded-full bg-brand/25 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-white">
+                    <Tag className="h-3 w-3" />
+                    Prețuri
+                  </span>
+                  Tarife / Costuri
+                </span>
+                <ChevronRight className="h-4 w-4 shrink-0" />
+              </a>
+
               <h3
                 id="services-heading"
                 className="mb-2 px-1 text-[11px] font-semibold uppercase tracking-[0.14em] text-ink-muted"
