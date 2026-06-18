@@ -544,7 +544,7 @@ function Team() {
           id="team-heading"
           className="font-display text-[1.75rem] font-extrabold leading-tight text-navy"
         >
-          Oameni reali, nu un brand abstract
+          Aceeași echipă care ți-a răspuns la telefon vine și la ușă
         </h2>
         <p className="mt-2 text-[14.5px] leading-relaxed text-ink-muted">
           În spatele fiecărui apel e o persoană cu nume și experiență
