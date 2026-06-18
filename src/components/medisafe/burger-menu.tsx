@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ChevronDown, ChevronRight, Menu, Phone, Sparkles, Tag, X } from "lucide-react";
+import { ChevronDown, ChevronRight, HelpCircle, Menu, Phone, Sparkles, Tag, X } from "lucide-react";
 import {
   Sheet,
   SheetContent,
@@ -184,6 +184,40 @@ export function BurgerMenu() {
                   <ChevronRight className="h-4 w-4 shrink-0" />
                 </a>
               </div>
+            </section>
+
+            {/* Frequently asked questions - reduce anxiety */}
+            <section aria-labelledby="faq-heading" className="mb-6">
+              <h3
+                id="faq-heading"
+                className="mb-2 flex items-center gap-1.5 px-1 text-[11px] font-semibold uppercase tracking-[0.14em] text-brand-deep"
+              >
+                <HelpCircle className="h-3.5 w-3.5" />
+                Întrebări frecvente
+              </h3>
+              <ul className="overflow-hidden rounded-2xl border border-brand/30 bg-surface shadow-[0_1px_0_oklch(0.72_0.13_232/0.08)]">
+                {[
+                  { q: "Cât de repede ajunge echipa la mine?", href: "#faq" },
+                  { q: "Cum aflu cât costă, înainte să decid?", href: "#faq" },
+                  { q: "În ce zone din București și Ilfov veniți?", href: "#faq" },
+                ].map((item, i, arr) => (
+                  <li key={item.q}>
+                    <a
+                      href={item.href}
+                      className={cn(
+                        "flex items-center justify-between gap-3 px-4 py-3.5 text-[14.5px] font-semibold text-navy transition-colors hover:bg-secondary",
+                        i !== arr.length - 1 && "border-b border-hairline",
+                      )}
+                    >
+                      <span className="flex items-center gap-2.5">
+                        <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-brand" />
+                        {item.q}
+                      </span>
+                      <ChevronRight className="h-4 w-4 shrink-0 text-ink-muted" />
+                    </a>
+                  </li>
+                ))}
+              </ul>
             </section>
 
             {/* Secondary nav */}
