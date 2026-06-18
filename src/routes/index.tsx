@@ -17,7 +17,7 @@ import {
   Syringe,
   TestTube2,
 } from "lucide-react";
-import { useState } from "react";
+import { Fragment, useState } from "react";
 
 import { SiteHeader } from "@/components/medisafe/site-header";
 import { StickyBottomBar } from "@/components/medisafe/sticky-bottom-bar";
@@ -288,7 +288,7 @@ function Steps() {
 
       <ol className="space-y-3">
         {steps.map((step, i) => (
-          <FragmentWithKey key={step.n}>
+          <Fragment key={step.n}>
             <li className="relative rounded-2xl border border-hairline bg-surface p-4 pl-5">
               <div className="grid grid-cols-[auto_minmax(0,1fr)] gap-3">
                 <span className="font-display text-[2rem] font-extrabold leading-none text-brand">
@@ -321,7 +321,7 @@ function Steps() {
                 </a>
               </li>
             )}
-          </FragmentWithKey>
+          </Fragment>
         ))}
       </ol>
     </section>
