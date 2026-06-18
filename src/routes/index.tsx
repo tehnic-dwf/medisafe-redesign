@@ -127,15 +127,17 @@ function Hero() {
         </p>
 
         {/* Hero photo */}
-        <div className="relative mt-6 overflow-hidden rounded-[28px] border border-hairline bg-surface shadow-[0_24px_60px_-30px_oklch(0.24_0.06_252/0.45)]">
-          <img
-            src={heroNurse}
-            alt="Asistentă medicală MediSafe, parte din echipa care vine acasă la pacienți în București și Ilfov"
-            width={1280}
-            height={1600}
-            className="block h-auto w-full"
-            fetchPriority="high"
-          />
+        <div className="relative mt-5 overflow-hidden rounded-[28px] border border-hairline bg-surface shadow-[0_24px_60px_-30px_oklch(0.24_0.06_252/0.45)]">
+          <div className="relative aspect-[4/3] w-full">
+            <img
+              src={heroNurse}
+              alt="Asistentă medicală MediSafe, parte din echipa care vine acasă la pacienți în București și Ilfov"
+              width={1280}
+              height={960}
+              className="absolute inset-0 h-full w-full object-cover object-top"
+              fetchPriority="high"
+            />
+          </div>
           {/* Floating identity card on the photo */}
           <div className="absolute bottom-3 left-3 right-3 flex items-center gap-3 rounded-2xl bg-surface/95 px-3.5 py-2.5 shadow-lg backdrop-blur-sm">
             <div className="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-navy text-white">
@@ -153,7 +155,22 @@ function Hero() {
         </div>
 
         {/* Primary CTA */}
-        <div className="mt-6 space-y-3">
+        <div className="mt-5 space-y-3">
+          {/* Google rating anchor — single dominant trust signal next to CTA */}
+          <a
+            href="https://www.google.com/search?q=medisafe+bucuresti"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center justify-center gap-1.5 text-[12.5px] text-ink-muted"
+          >
+            <span className="flex items-center gap-0.5 text-amber-500">
+              {Array.from({ length: 5 }).map((_, i) => (
+                <Star key={i} className="h-3.5 w-3.5 fill-current" strokeWidth={0} />
+              ))}
+            </span>
+            <span className="font-semibold text-navy">4.9</span>
+            <span>din 119 recenzii Google</span>
+          </a>
           <a
             href={`tel:${PHONE_TEL}`}
             className="group relative flex w-full items-center justify-center gap-2 overflow-hidden rounded-full bg-navy px-5 py-4 text-[15.5px] font-semibold text-white shadow-[0_18px_36px_-18px_oklch(0.24_0.06_252/0.6)] transition-transform active:scale-[0.99]"
