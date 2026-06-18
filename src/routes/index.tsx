@@ -17,7 +17,7 @@ import {
   Syringe,
   TestTube2,
 } from "lucide-react";
-import { useState } from "react";
+import { Fragment, useState } from "react";
 
 import { SiteHeader } from "@/components/medisafe/site-header";
 import { StickyBottomBar } from "@/components/medisafe/sticky-bottom-bar";
@@ -288,30 +288,40 @@ function Steps() {
 
       <ol className="space-y-3">
         {steps.map((step, i) => (
-          <li
-            key={step.n}
-            className="relative rounded-2xl border border-hairline bg-surface p-4 pl-5"
-          >
-            <div className="grid grid-cols-[auto_minmax(0,1fr)] gap-3">
-              <span className="font-display text-[2rem] font-extrabold leading-none text-brand">
-                {step.n}
-              </span>
-              <div className="min-w-0">
-                <h3 className="text-[15.5px] font-semibold text-navy">
-                  {step.title}
-                </h3>
-                <p className="mt-1 text-[13.5px] leading-relaxed text-ink-muted">
-                  {step.body}
-                </p>
+          <Fragment key={step.n}>
+            <li className="relative rounded-2xl border border-hairline bg-surface p-4 pl-5">
+              <div className="grid grid-cols-[auto_minmax(0,1fr)] gap-3">
+                <span className="font-display text-[2rem] font-extrabold leading-none text-brand">
+                  {step.n}
+                </span>
+                <div className="min-w-0">
+                  <h3 className="text-[15.5px] font-semibold text-navy">
+                    {step.title}
+                  </h3>
+                  <p className="mt-1 text-[13.5px] leading-relaxed text-ink-muted">
+                    {step.body}
+                  </p>
+                </div>
               </div>
-            </div>
-            {i < steps.length - 1 && (
-              <span
-                aria-hidden
-                className="absolute left-9 top-full block h-3 w-px bg-hairline"
-              />
+              {i < steps.length - 1 && (
+                <span
+                  aria-hidden
+                  className="absolute left-9 top-full block h-3 w-px bg-hairline"
+                />
+              )}
+            </li>
+            {i === 1 && (
+              <li className="list-none py-1">
+                <a
+                  href="#tarife"
+                  className="flex items-center justify-center gap-2 text-[13.5px] font-semibold text-brand-deep underline-offset-4 hover:underline"
+                >
+                  Vezi toate tarifele și costurile
+                  <ArrowRight className="h-4 w-4" />
+                </a>
+              </li>
             )}
-          </li>
+          </Fragment>
         ))}
       </ol>
     </section>
