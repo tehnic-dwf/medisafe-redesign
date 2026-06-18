@@ -15,12 +15,19 @@ export function StickyBottomBar({ watchSelector = "#hero-primary-cta" }: { watch
       onScroll();
       return () => window.removeEventListener("scroll", onScroll);
     }
-    const io = new IntersectionObserver(
-      ([entry]) => setVisible(!entry.isIntersecting),
-      { threshold: 0, rootMargin: "0px 0px -10px 0px" },
-    );
-    io.observe(target);
-    return () => io.disconnect();
+    // Show only after the user has scrolled PAST the CTA
+    // (i.e. the CTA's bottom edge is above the viewport top).
+    const onScroll = () => {
+      const rect = (target as HTMLElement).getBoundingClientRect();
+      setVisible(rect.bottom < 0);
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", onScroll);
+    onScroll();
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("resize", onScroll);
+    };
   }, [watchSelector]);
 
   return (
