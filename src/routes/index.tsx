@@ -709,7 +709,7 @@ function FounderNote() {
           rămâne pe numele meu — și pe al echipei pe care o trimit la ușa ta.
         </p>
         <p className="mt-3 text-[13px] font-semibold text-navy">
-          — Fondator MediSafe
+          — Ioan Lupu, fondator MediSafe
         </p>
       </div>
     </section>
