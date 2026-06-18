@@ -1,5 +1,16 @@
 import { useState } from "react";
-import { ChevronDown, ChevronRight, HelpCircle, Menu, Phone, Sparkles, Tag, X } from "lucide-react";
+import {
+  CalendarCheck,
+  ChevronDown,
+  ChevronRight,
+  HelpCircle,
+  MapPin,
+  Menu,
+  Phone,
+  Sparkles,
+  Tag,
+  X,
+} from "lucide-react";
 import {
   Sheet,
   SheetContent,
@@ -239,6 +250,43 @@ export function BurgerMenu() {
                 </a>
               ))}
             </nav>
+
+            {/* Footer-equivalent info block - only what's not already visible above */}
+            <section
+              aria-label="Informații companie"
+              className="rounded-2xl border border-hairline bg-surface p-4"
+            >
+              <div className="flex items-center gap-2">
+                <span className="rounded-full bg-navy/8 px-2.5 py-1 text-[10.5px] font-semibold uppercase tracking-wider text-navy">
+                  București &amp; Ilfov
+                </span>
+                <span className="inline-flex items-center gap-1 text-[11.5px] font-medium text-ink-muted">
+                  <CalendarCheck className="h-3.5 w-3.5" />
+                  Activăm din 2017
+                </span>
+              </div>
+              <p className="mt-3 text-[13px] leading-relaxed text-ink-muted">
+                Servicii medicale la domiciliu, cu echipe proprii. Confirmăm
+                telefonic disponibilitatea, costul și pașii înainte ca echipa
+                să ajungă la tine.
+              </p>
+              <div className="mt-3 flex items-start gap-2 text-[13px] text-navy">
+                <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-ink-muted" />
+                <span>P-ța Națiunile Unite nr. 3–5, Sector 4, București</span>
+              </div>
+              <div className="mt-4 border-t border-hairline pt-3 text-[11.5px] leading-relaxed text-ink-muted">
+                <p>
+                  © {new Date().getFullYear()} Vital Medical Concept SRL · CUI
+                  RO 38173670
+                </p>
+                <a
+                  href="#"
+                  className="mt-1 inline-block font-semibold text-brand-deep underline-offset-4 hover:underline"
+                >
+                  Confidențialitate
+                </a>
+              </div>
+            </section>
           </div>
 
           {/* Sticky bottom CTA inside menu */}
