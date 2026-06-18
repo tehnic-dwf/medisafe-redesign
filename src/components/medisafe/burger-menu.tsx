@@ -208,27 +208,46 @@ export function BurgerMenu() {
               </h3>
               <ul className="overflow-hidden rounded-2xl border border-brand/30 bg-surface shadow-[0_1px_0_oklch(0.72_0.13_232/0.08)]">
                 {[
-                  { q: "Cât de repede ajunge echipa la mine?", href: "#faq" },
-                  { q: "Cum aflu cât costă, înainte să decid?", href: "#faq" },
-                  { q: "În ce zone din București și Ilfov veniți?", href: "#faq" },
+                  {
+                    q: "Cât de repede ajunge echipa la mine?",
+                    a: "În aceeași zi sau în ziua următoare, în majoritatea cazurilor. Confirmăm intervalul la telefon.",
+                  },
+                  {
+                    q: "Cum aflu cât costă, înainte să decid?",
+                    a: "Îți spunem costul total la telefon — consumabile și deplasare incluse. Fără surprize la final.",
+                  },
+                  {
+                    q: "În ce zone din București și Ilfov veniți?",
+                    a: "Acoperim tot Bucureștiul și Ilfovul. Confirmăm la telefon dacă adresa intră în program.",
+                  },
                 ].map((item, i, arr) => (
-                  <li key={item.q}>
-                    <a
-                      href={item.href}
-                      className={cn(
-                        "flex items-center justify-between gap-3 px-4 py-3.5 text-[14.5px] font-semibold text-navy transition-colors hover:bg-secondary",
-                        i !== arr.length - 1 && "border-b border-hairline",
-                      )}
-                    >
-                      <span className="flex items-center gap-2.5">
-                        <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-brand" />
-                        {item.q}
-                      </span>
-                      <ChevronRight className="h-4 w-4 shrink-0 text-ink-muted" />
-                    </a>
+                  <li
+                    key={item.q}
+                    className={cn(i !== arr.length - 1 && "border-b border-hairline")}
+                  >
+                    <details className="group">
+                      <summary className="flex cursor-pointer list-none items-center justify-between gap-3 px-4 py-3.5 text-[14.5px] font-semibold text-navy transition-colors hover:bg-secondary">
+                        <span className="flex items-center gap-2.5">
+                          <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-brand" />
+                          {item.q}
+                        </span>
+                        <ChevronDown className="h-4 w-4 shrink-0 text-ink-muted transition-transform group-open:rotate-180" />
+                      </summary>
+                      <p className="px-4 pb-3.5 pl-[1.875rem] text-[13px] leading-relaxed text-ink-muted">
+                        {item.a}
+                      </p>
+                    </details>
                   </li>
                 ))}
               </ul>
+              <a
+                href="#faq"
+                onClick={() => setOpen(false)}
+                className="mt-3 flex items-center justify-center gap-1.5 text-[13px] font-semibold text-brand-deep underline-offset-4 hover:underline"
+              >
+                Vezi toate întrebările
+                <ChevronRight className="h-4 w-4" />
+              </a>
             </section>
 
             {/* Secondary nav */}
