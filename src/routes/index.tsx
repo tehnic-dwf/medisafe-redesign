@@ -96,9 +96,9 @@ function Hero() {
 
         {/* Headline */}
         <h1 className="font-display text-[2.05rem] font-extrabold leading-[1.08] tracking-[-0.02em] text-navy sm:text-[2.4rem]">
-          Servicii medicale la
+          Pentru cineva drag,
           <br />
-          domiciliu, cu{" "}
+          îngrijire medicală acasă, cu{" "}
           <span className="relative whitespace-nowrap">
             calm
             <svg
@@ -121,8 +121,8 @@ function Hero() {
 
         {/* Subhead */}
         <p className="mt-4 text-[15.5px] leading-[1.5] text-ink-muted">
-          Venim acasă la tine și îți confirmăm costul și pașii{" "}
-          <span className="font-semibold text-navy">înainte</span> să ajungă echipa.
+          Te ghidăm la telefon și îți confirmăm costul și pașii{" "}
+          <span className="font-semibold text-navy">înainte</span> ca echipa să ajungă la ușă.
         </p>
 
         {/* Hero photo */}
@@ -235,7 +235,7 @@ function TrustStrip() {
               4,9 / 5 pe Google · 119 recenzii
             </p>
             <p className="truncate text-[11.5px] text-white/70">
-              Recenzii verificate independent prin Verifeedo
+              Recenzii publice, verificabile pe Google
             </p>
           </div>
         </div>
