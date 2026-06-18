@@ -67,6 +67,7 @@ function Home() {
         <Expectations />
         <Team />
         <Testimonials />
+        <FounderNote />
         <Authority />
         <Faq />
       </main>
