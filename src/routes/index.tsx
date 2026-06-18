@@ -128,13 +128,13 @@ function Hero() {
 
         {/* Hero photo */}
         <div className="relative mt-5 overflow-hidden rounded-[28px] border border-hairline bg-surface shadow-[0_24px_60px_-30px_oklch(0.24_0.06_252/0.45)]">
-          <div className="relative aspect-[4/3] w-full">
+          <div className="relative aspect-[5/6] w-full">
             <img
               src={heroNurse}
               alt="Asistentă medicală MediSafe, parte din echipa care vine acasă la pacienți în București și Ilfov"
               width={1280}
-              height={960}
-              className="absolute inset-0 h-full w-full object-cover object-top"
+              height={1536}
+              className="absolute inset-0 h-full w-full object-cover object-[center_top]"
               fetchPriority="high"
             />
           </div>
