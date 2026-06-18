@@ -83,9 +83,9 @@ function Home() {
 function Hero() {
   return (
     <section className="relative overflow-hidden">
-      <div className="mx-auto max-w-2xl px-4 pb-8 pt-6">
+      <div className="mx-auto max-w-2xl px-4 pb-8 pt-3 sm:pt-6">
         {/* Eyebrow */}
-        <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-hairline bg-surface px-3 py-1.5">
+        <div className="mb-3 inline-flex items-center gap-2 rounded-full border border-hairline bg-surface px-3 py-1.5 sm:mb-5">
           <span className="relative flex h-2 w-2">
             <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-success/60 opacity-75" />
             <span className="relative inline-flex h-2 w-2 rounded-full bg-success" />
@@ -121,14 +121,14 @@ function Hero() {
         </h1>
 
         {/* Subhead */}
-        <p className="mt-4 text-[15.5px] leading-[1.5] text-ink-muted">
+        <p className="mt-3 text-[15.5px] leading-[1.45] text-ink-muted sm:mt-4">
           Te ghidăm la telefon și îți confirmăm costul și pașii{" "}
           <span className="font-semibold text-navy">înainte</span> ca echipa să ajungă la ușă.
         </p>
 
         {/* Hero photo */}
-        <div className="relative mt-5 overflow-hidden rounded-[28px] border border-hairline bg-surface shadow-[0_24px_60px_-30px_oklch(0.24_0.06_252/0.45)]">
-          <div className="relative aspect-[5/4] w-full sm:aspect-[4/5]">
+        <div className="relative mt-3 overflow-hidden rounded-[28px] border border-hairline bg-surface shadow-[0_24px_60px_-30px_oklch(0.24_0.06_252/0.45)] sm:mt-5">
+          <div className="relative aspect-[4/3] w-full sm:aspect-[4/5]">
             <img
               src={heroNurse}
               alt="Asistentă medicală MediSafe, parte din echipa care vine acasă la pacienți în București și Ilfov"
@@ -139,8 +139,8 @@ function Hero() {
             />
           </div>
           {/* Identity strip below the photo */}
-          <div className="flex items-center gap-3 border-t border-hairline bg-surface px-3.5 py-2.5">
-            <div className="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-navy text-white">
+          <div className="flex items-center gap-3 border-t border-hairline bg-surface px-3.5 py-2">
+            <div className="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-navy text-white">
               <Stethoscope className="h-4 w-4" />
             </div>
             <div className="min-w-0">
