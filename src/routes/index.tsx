@@ -526,7 +526,7 @@ function Team() {
       img: teamNurse1,
       name: "Simona",
       role: "Asistentă șefă · 9 ani la domiciliu",
-      quote: "„Vin cu calm. Pacientul simte asta primul.”",
+      quote: "„Explic ce urmează să fac, pas cu pas. Oamenii se liniștesc când înțeleg.”",
     },
     {
       img: teamNurse2,
