@@ -138,8 +138,8 @@ function Hero() {
               fetchPriority="high"
             />
           </div>
-          {/* Floating identity card on the photo */}
-          <div className="absolute bottom-3 left-3 right-3 flex items-center gap-3 rounded-2xl bg-surface/95 px-3.5 py-2.5 shadow-lg backdrop-blur-sm">
+          {/* Identity strip below the photo */}
+          <div className="flex items-center gap-3 border-t border-hairline bg-surface px-3.5 py-2.5">
             <div className="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-navy text-white">
               <Stethoscope className="h-4 w-4" />
             </div>
