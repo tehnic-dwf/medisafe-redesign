@@ -404,6 +404,10 @@ function ServicePillars() {
                   {name}
                 </h3>
                 <p className="mt-1 text-[12.5px] text-ink-muted">{sub}</p>
+                <p className="mt-2 inline-flex items-center gap-1 rounded-full bg-success/10 px-2 py-0.5 text-[11px] font-semibold text-success-deep">
+                  <CheckCircle2 className="h-3 w-3" strokeWidth={2.5} />
+                  Consumabile + deplasare incluse
+                </p>
               </div>
               <div className="mt-auto flex items-center justify-between gap-2 border-t border-hairline pt-3">
                 <span className="text-[13px] font-semibold text-brand-deep">
