@@ -120,15 +120,14 @@ function Hero() {
         </h1>
 
         {/* Subhead */}
-        <p className="mt-4 text-[15.5px] leading-[1.55] text-ink-muted">
-          Nu ești singur cu decizia asta. Echipa MediSafe vine acasă la tine,
-          îți explică clar ce se întâmplă și îți confirmă disponibilitatea,
-          costul și pașii <span className="font-semibold text-navy">înainte</span> să ajungă.
+        <p className="mt-4 text-[15.5px] leading-[1.5] text-ink-muted">
+          Venim acasă la tine și îți confirmăm costul și pașii{" "}
+          <span className="font-semibold text-navy">înainte</span> să ajungă echipa.
         </p>
 
         {/* Hero photo */}
         <div className="relative mt-5 overflow-hidden rounded-[28px] border border-hairline bg-surface shadow-[0_24px_60px_-30px_oklch(0.24_0.06_252/0.45)]">
-          <div className="relative aspect-[5/6] w-full">
+          <div className="relative aspect-[4/5] w-full">
             <img
               src={heroNurse}
               alt="Asistentă medicală MediSafe, parte din echipa care vine acasă la pacienți în București și Ilfov"
