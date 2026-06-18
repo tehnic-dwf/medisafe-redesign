@@ -288,11 +288,8 @@ function Steps() {
 
       <ol className="space-y-3">
         {steps.map((step, i) => (
-          <>
-            <li
-              key={step.n}
-              className="relative rounded-2xl border border-hairline bg-surface p-4 pl-5"
-            >
+          <FragmentWithKey key={step.n}>
+            <li className="relative rounded-2xl border border-hairline bg-surface p-4 pl-5">
               <div className="grid grid-cols-[auto_minmax(0,1fr)] gap-3">
                 <span className="font-display text-[2rem] font-extrabold leading-none text-brand">
                   {step.n}
@@ -314,7 +311,7 @@ function Steps() {
               )}
             </li>
             {i === 1 && (
-              <li key="tarife-link" className="list-none py-1">
+              <li className="list-none py-1">
                 <a
                   href="#tarife"
                   className="flex items-center justify-center gap-2 text-[13.5px] font-semibold text-brand-deep underline-offset-4 hover:underline"
@@ -324,7 +321,7 @@ function Steps() {
                 </a>
               </li>
             )}
-          </>
+          </FragmentWithKey>
         ))}
       </ol>
     </section>
