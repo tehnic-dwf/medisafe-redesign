@@ -256,6 +256,7 @@ export function BurgerMenu() {
                 { name: "Despre MediSafe", href: "#" },
                 { name: "Echipa noastră", href: "#" },
                 { name: "Tarife", href: "#" },
+                { name: "Blog", href: "#" },
                 { name: "Întrebări frecvente", href: "#" },
                 { name: "Recenzii", href: "#" },
                 { name: "Contact", href: "#" },
