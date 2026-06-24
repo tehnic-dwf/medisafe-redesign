@@ -45,8 +45,8 @@ export const SERVICE_GROUPS: ServiceGroup[] = [
     label: "Servicii medicale copii",
     items: [
       { name: "Recoltare analize copii", href: "#" },
-      { name: "Injecții pediatrice", href: "#" },
-      { name: "Perfuzii pediatrice", href: "#" },
+      { name: "Injecții copii", href: "#" },
+      { name: "Perfuzii copii", href: "#" },
       { name: "Monitorizare funcții vitale", href: "#" },
       { name: "Îngrijiri plăgi", href: "#" },
     ],
