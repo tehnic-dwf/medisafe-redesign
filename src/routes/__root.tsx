@@ -84,7 +84,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           "Echipa MediSafe vine acasă la tine. Îți confirmăm telefonic disponibilitatea, costul și pașii înainte de vizită. Injecții, perfuzii, plăgi, escare, analize.",
       },
       { name: "author", content: "MediSafe" },
-      { property: "og:title", content: "MediSafe — Servicii medicale la domiciliu" },
+      { property: "og:title", content: "MediSafe — Servicii medicale la domiciliu în București și Ilfov" },
       {
         property: "og:description",
         content:
@@ -92,6 +92,12 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "MediSafe — Servicii medicale la domiciliu în București și Ilfov" },
+      { name: "description", content: "Medisafe.ro is a redesigned website focused on enhancing user experience and visual appeal." },
+      { property: "og:description", content: "Medisafe.ro is a redesigned website focused on enhancing user experience and visual appeal." },
+      { name: "twitter:description", content: "Medisafe.ro is a redesigned website focused on enhancing user experience and visual appeal." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/1a31c380-2b71-49c3-b756-c28d11af5be8/id-preview-171f6da5--eef91c59-bc0a-418b-9c47-6ee199965573.lovable.app-1782468237610.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/1a31c380-2b71-49c3-b756-c28d11af5be8/id-preview-171f6da5--eef91c59-bc0a-418b-9c47-6ee199965573.lovable.app-1782468237610.png" },
     ],
     links: [
       {
