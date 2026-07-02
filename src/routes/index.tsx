@@ -122,8 +122,8 @@ function Hero() {
 
         {/* Subhead */}
         <p className="mt-3 text-[15.5px] leading-[1.45] text-ink-muted sm:mt-4">
-          Te ghidăm la telefon și îți confirmăm costul și pașii{" "}
-          <span className="font-semibold text-navy">înainte</span> ca echipa să ajungă la ușă.
+          Te ghidăm la telefon și îți confirmăm costul și pașii <span className="font-semibold text-navy">înainte</span>{" "}
+          ca echipa să ajungă la ușă.
         </p>
 
         {/* Hero photo */}
@@ -144,12 +144,8 @@ function Hero() {
               <Stethoscope className="h-4 w-4" />
             </div>
             <div className="min-w-0">
-              <p className="truncate text-[13.5px] font-semibold text-navy">
-                Simona, asistentă șefă MediSafe
-              </p>
-              <p className="truncate text-[12px] text-ink-muted">
-                Coordonează echipele de teren · 9 ani experiență
-              </p>
+              <p className="truncate text-[13.5px] font-semibold text-navy">Simona, asistentă șefă MediSafe</p>
+              <p className="truncate text-[12px] text-ink-muted">Coordonează echipele de teren · 9 ani experiență</p>
             </div>
           </div>
         </div>
@@ -176,16 +172,13 @@ function Hero() {
             id="hero-primary-cta"
             className="group relative flex w-full items-center justify-center gap-2 overflow-hidden rounded-full bg-navy px-5 py-4 text-[15.5px] font-semibold text-white shadow-[0_18px_36px_-18px_oklch(0.24_0.06_252/0.6)] transition-transform active:scale-[0.99]"
           >
-            <span
-              aria-hidden
-              className="absolute inset-y-0 left-0 w-1.5 bg-brand"
-            />
+            <span aria-hidden className="absolute inset-y-0 left-0 w-1.5 bg-brand" />
             <Phone className="h-4 w-4" strokeWidth={2.5} />
             Sună acum și te ghidăm
             <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
           </a>
           <p className="text-center text-[12.5px] text-ink-muted">
-            Răspundem 24/24h · Confirmăm costul înainte de vizită · Fără apăsare să cumperi
+            Răspundem 24/24h · Confirmăm costul înainte de vizită · Nu te costă nimic să ne contactezi.
           </p>
           <a
             href={WHATSAPP_HREF}
@@ -232,12 +225,8 @@ function TrustStrip() {
             ))}
           </div>
           <div className="min-w-0">
-            <p className="truncate text-[14px] font-semibold">
-              4,9 / 5 pe Google · 119 recenzii
-            </p>
-            <p className="truncate text-[11.5px] text-white/70">
-              Recenzii publice, verificabile pe Google
-            </p>
+            <p className="truncate text-[14px] font-semibold">4,9 / 5 pe Google · 119 recenzii</p>
+            <p className="truncate text-[11.5px] text-white/70">Recenzii publice, verificabile pe Google</p>
           </div>
         </div>
       </div>
@@ -267,23 +256,14 @@ function Steps() {
     },
   ];
   return (
-    <section
-      aria-labelledby="steps-heading"
-      className="mx-auto max-w-2xl px-4 py-10"
-    >
+    <section aria-labelledby="steps-heading" className="mx-auto max-w-2xl px-4 py-10">
       <header className="mb-6">
-        <p className="mb-2 text-[11.5px] font-semibold uppercase tracking-[0.14em] text-brand-deep">
-          Cum lucrăm
-        </p>
-        <h2
-          id="steps-heading"
-          className="font-display text-[1.75rem] font-extrabold leading-tight text-navy"
-        >
+        <p className="mb-2 text-[11.5px] font-semibold uppercase tracking-[0.14em] text-brand-deep">Cum lucrăm</p>
+        <h2 id="steps-heading" className="font-display text-[1.75rem] font-extrabold leading-tight text-navy">
           Ce se întâmplă după ce suni
         </h2>
         <p className="mt-2 text-[14.5px] leading-relaxed text-ink-muted">
-          Îți explicăm pe scurt ce se poate face acasă, ce trebuie pregătit și
-          când poate ajunge echipa.
+          Îți explicăm pe scurt ce se poate face acasă, ce trebuie pregătit și când poate ajunge echipa.
         </p>
       </header>
 
@@ -292,23 +272,14 @@ function Steps() {
           <Fragment key={step.n}>
             <li className="relative rounded-2xl border border-hairline bg-surface p-4 pl-5">
               <div className="grid grid-cols-[auto_minmax(0,1fr)] gap-3">
-                <span className="font-display text-[2rem] font-extrabold leading-none text-brand">
-                  {step.n}
-                </span>
+                <span className="font-display text-[2rem] font-extrabold leading-none text-brand">{step.n}</span>
                 <div className="min-w-0">
-                  <h3 className="text-[15.5px] font-semibold text-navy">
-                    {step.title}
-                  </h3>
-                  <p className="mt-1 text-[13.5px] leading-relaxed text-ink-muted">
-                    {step.body}
-                  </p>
+                  <h3 className="text-[15.5px] font-semibold text-navy">{step.title}</h3>
+                  <p className="mt-1 text-[13.5px] leading-relaxed text-ink-muted">{step.body}</p>
                 </div>
               </div>
               {i < steps.length - 1 && (
-                <span
-                  aria-hidden
-                  className="absolute left-9 top-full block h-3 w-px bg-hairline"
-                />
+                <span aria-hidden className="absolute left-9 top-full block h-3 w-px bg-hairline" />
               )}
             </li>
             {i === 1 && (
@@ -363,23 +334,16 @@ function ServicePillars() {
     },
   ];
   return (
-    <section
-      aria-labelledby="pillars-heading"
-      className="mx-auto max-w-2xl px-4 py-10"
-    >
+    <section aria-labelledby="pillars-heading" className="mx-auto max-w-2xl px-4 py-10">
       <header className="mb-6">
         <p className="mb-2 text-[11.5px] font-semibold uppercase tracking-[0.14em] text-brand-deep">
           Serviciile cele mai cerute
         </p>
-        <h2
-          id="pillars-heading"
-          className="font-display text-[1.75rem] font-extrabold leading-tight text-navy"
-        >
+        <h2 id="pillars-heading" className="font-display text-[1.75rem] font-extrabold leading-tight text-navy">
           Cu ce te putem ajuta acasă
         </h2>
         <p className="mt-2 text-[14.5px] leading-relaxed text-ink-muted">
-          Nu știi exact ce serviciu îți trebuie? Ne spui recomandarea medicală
-          și confirmăm noi opțiunea potrivită.
+          Nu știi exact ce serviciu îți trebuie? Ne spui recomandarea medicală și confirmăm noi opțiunea potrivită.
         </p>
       </header>
 
@@ -401,9 +365,7 @@ function ServicePillars() {
                 )}
               </div>
               <div className="min-w-0">
-                <h3 className="text-[15.5px] font-semibold leading-tight text-navy">
-                  {name}
-                </h3>
+                <h3 className="text-[15.5px] font-semibold leading-tight text-navy">{name}</h3>
                 <p className="mt-1 text-[12.5px] text-ink-muted">{sub}</p>
                 <p className="mt-2 inline-flex items-center gap-1 rounded-full bg-success/15 px-2 py-0.5 text-[11px] font-semibold text-navy">
                   <CheckCircle2 className="h-3 w-3 text-success" strokeWidth={2.5} />
@@ -411,9 +373,7 @@ function ServicePillars() {
                 </p>
               </div>
               <div className="mt-auto flex items-center justify-between gap-2 border-t border-hairline pt-3">
-                <span className="text-[13px] font-semibold text-brand-deep">
-                  {price}
-                </span>
+                <span className="text-[13px] font-semibold text-brand-deep">{price}</span>
                 <span className="inline-flex items-center gap-1 text-[12.5px] font-semibold text-navy">
                   Vezi detalii
                   <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" />
@@ -452,24 +412,15 @@ function Expectations() {
     "Achiziționează medicația injectabilă recomandată, dacă e cazul.",
   ];
   return (
-    <section
-      aria-labelledby="expectations-heading"
-      className="bg-navy py-12 text-white"
-    >
+    <section aria-labelledby="expectations-heading" className="bg-navy py-12 text-white">
       <div className="mx-auto max-w-2xl px-4">
         <header className="mb-6">
-          <p className="mb-2 text-[11.5px] font-semibold uppercase tracking-[0.14em] text-brand">
-            Fără surprize
-          </p>
-          <h2
-            id="expectations-heading"
-            className="font-display text-[1.75rem] font-extrabold leading-tight"
-          >
+          <p className="mb-2 text-[11.5px] font-semibold uppercase tracking-[0.14em] text-brand">Fără surprize</p>
+          <h2 id="expectations-heading" className="font-display text-[1.75rem] font-extrabold leading-tight">
             Ca să fie totul clar, de la început
           </h2>
           <p className="mt-2 text-[14.5px] leading-relaxed text-white/70">
-            Două liste scurte: ce facem noi pentru tine și cum ne ajuți tu să
-            ajungem pregătiți.
+            Două liste scurte: ce facem noi pentru tine și cum ne ajuți tu să ajungem pregătiți.
           </p>
         </header>
 
@@ -482,15 +433,7 @@ function Expectations() {
   );
 }
 
-function ExpectationCard({
-  title,
-  items,
-  tone,
-}: {
-  title: string;
-  items: string[];
-  tone: "brand" | "muted";
-}) {
+function ExpectationCard({ title, items, tone }: { title: string; items: string[]; tone: "brand" | "muted" }) {
   return (
     <div className="rounded-2xl bg-white/[0.04] p-4 ring-1 ring-white/10 backdrop-blur-sm">
       <h3 className="mb-3 text-[14.5px] font-semibold">{title}</h3>
@@ -498,10 +441,7 @@ function ExpectationCard({
         {items.map((item) => (
           <li key={item} className="flex items-start gap-2.5">
             <CheckCircle2
-              className={cn(
-                "mt-0.5 h-4 w-4 shrink-0",
-                tone === "brand" ? "text-brand" : "text-white/40",
-              )}
+              className={cn("mt-0.5 h-4 w-4 shrink-0", tone === "brand" ? "text-brand" : "text-white/40")}
               strokeWidth={2.25}
             />
             <span className="text-[13.5px] leading-snug text-white/85">{item}</span>
@@ -537,32 +477,22 @@ function Team() {
     },
   ];
   return (
-    <section
-      aria-labelledby="team-heading"
-      className="mx-auto max-w-2xl px-4 py-12"
-    >
+    <section aria-labelledby="team-heading" className="mx-auto max-w-2xl px-4 py-12">
       <header className="mb-6">
         <p className="mb-2 text-[11.5px] font-semibold uppercase tracking-[0.14em] text-brand-deep">
           Echipa care vine la tine acasă
         </p>
-        <h2
-          id="team-heading"
-          className="font-display text-[1.75rem] font-extrabold leading-tight text-navy"
-        >
+        <h2 id="team-heading" className="font-display text-[1.75rem] font-extrabold leading-tight text-navy">
           Aceeași echipă care ți-a răspuns la telefon vine și la ușă
         </h2>
         <p className="mt-2 text-[14.5px] leading-relaxed text-ink-muted">
-          În spatele fiecărui apel e o persoană cu nume și experiență
-          medicală — exact persoana care va suna la ușa ta.
+          În spatele fiecărui apel e o persoană cu nume și experiență medicală — exact persoana care va suna la ușa ta.
         </p>
       </header>
 
       <ul className="space-y-3">
         {team.map((person) => (
-          <li
-            key={person.name}
-            className="overflow-hidden rounded-2xl border border-hairline bg-surface"
-          >
+          <li key={person.name} className="overflow-hidden rounded-2xl border border-hairline bg-surface">
             <div className="grid grid-cols-[112px_minmax(0,1fr)] gap-0">
               <img
                 src={person.img}
@@ -573,13 +503,9 @@ function Team() {
                 className="h-full w-full object-cover"
               />
               <div className="min-w-0 p-4">
-                <h3 className="text-[15px] font-semibold leading-tight text-navy">
-                  {person.name}
-                </h3>
+                <h3 className="text-[15px] font-semibold leading-tight text-navy">{person.name}</h3>
                 <p className="mt-0.5 text-[12.5px] text-ink-muted">{person.role}</p>
-                <p className="mt-2 text-[13px] italic leading-snug text-navy/80">
-                  {person.quote}
-                </p>
+                <p className="mt-2 text-[13px] italic leading-snug text-navy/80">{person.quote}</p>
               </div>
             </div>
           </li>
@@ -606,54 +532,33 @@ function Testimonials() {
     },
   ];
   return (
-    <section
-      aria-labelledby="reviews-heading"
-      className="bg-secondary/40 py-12"
-    >
+    <section aria-labelledby="reviews-heading" className="bg-secondary/40 py-12">
       <div className="mx-auto max-w-2xl px-4">
         <header className="mb-6">
           <div className="mb-2 flex items-center gap-2">
             <div className="flex items-center gap-0.5">
               {Array.from({ length: 5 }).map((_, i) => (
-                <Star
-                  key={i}
-                  className="h-3.5 w-3.5 fill-brand-deep text-brand-deep"
-                />
+                <Star key={i} className="h-3.5 w-3.5 fill-brand-deep text-brand-deep" />
               ))}
             </div>
             <p className="text-[11.5px] font-semibold uppercase tracking-[0.14em] text-brand-deep">
               4,9 / 5 · 119 recenzii Google
             </p>
           </div>
-          <h2
-            id="reviews-heading"
-            className="font-display text-[1.75rem] font-extrabold leading-tight text-navy"
-          >
+          <h2 id="reviews-heading" className="font-display text-[1.75rem] font-extrabold leading-tight text-navy">
             Ce spun pacienții și aparținătorii
           </h2>
         </header>
 
         <ul className="space-y-3">
           {reviews.map((r) => (
-            <li
-              key={r.name}
-              className="relative rounded-2xl border border-hairline bg-surface p-5"
-            >
-              <Quote
-                aria-hidden
-                className="absolute right-4 top-4 h-7 w-7 text-brand/25"
-              />
-              <p className="text-[14.5px] leading-relaxed text-navy/90">
-                {r.text}
-              </p>
+            <li key={r.name} className="relative rounded-2xl border border-hairline bg-surface p-5">
+              <Quote aria-hidden className="absolute right-4 top-4 h-7 w-7 text-brand/25" />
+              <p className="text-[14.5px] leading-relaxed text-navy/90">{r.text}</p>
               <div className="mt-3 flex items-center justify-between gap-2 border-t border-hairline pt-3">
                 <div className="min-w-0">
-                  <p className="truncate text-[13px] font-semibold text-navy">
-                    {r.name}
-                  </p>
-                  <p className="truncate text-[11.5px] text-ink-muted">
-                    {r.context}
-                  </p>
+                  <p className="truncate text-[13px] font-semibold text-navy">{r.name}</p>
+                  <p className="truncate text-[11.5px] text-ink-muted">{r.context}</p>
                 </div>
                 <span className="shrink-0 text-[11px] font-semibold uppercase tracking-wider text-ink-muted">
                   Verificat · Google
@@ -687,30 +592,21 @@ function Authority() {
 /* ------------------------------------------------------------------ */
 function FounderNote() {
   return (
-    <section
-      aria-labelledby="founder-heading"
-      className="mx-auto max-w-2xl px-4 py-10"
-    >
+    <section aria-labelledby="founder-heading" className="mx-auto max-w-2xl px-4 py-10">
       <div className="rounded-2xl border border-hairline bg-surface p-5">
         <p className="mb-2 text-[11.5px] font-semibold uppercase tracking-[0.14em] text-brand-deep">
           Mesaj de la fondator
         </p>
-        <h2
-          id="founder-heading"
-          className="font-display text-[1.4rem] font-extrabold leading-tight text-navy"
-        >
+        <h2 id="founder-heading" className="font-display text-[1.4rem] font-extrabold leading-tight text-navy">
           Nu îți vindem un serviciu de care nu ai nevoie.
         </h2>
         <p className="mt-3 text-[14px] leading-relaxed text-ink-muted">
-          Am pornit MediSafe în 2017 pentru oamenii care, ca mine, au avut un
-          părinte de îngrijit acasă și nu știau de unde să înceapă. De atunci,
-          regula e simplă: dacă o procedură nu e potrivită pentru cazul tău,
-          îți spunem direct, chiar dacă pierdem o programare. Răspunderea
-          rămâne pe numele meu — și pe al echipei pe care o trimit la ușa ta.
+          Am pornit MediSafe în 2017 pentru oamenii care, ca mine, au avut un părinte de îngrijit acasă și nu știau de
+          unde să înceapă. De atunci, regula e simplă: dacă o procedură nu e potrivită pentru cazul tău, îți spunem
+          direct, chiar dacă pierdem o programare. Răspunderea rămâne pe numele meu — și pe al echipei pe care o trimit
+          la ușa ta.
         </p>
-        <p className="mt-3 text-[13px] font-semibold text-navy">
-          — Ioan Lupu, fondator MediSafe
-        </p>
+        <p className="mt-3 text-[13px] font-semibold text-navy">— Ioan Lupu, fondator MediSafe</p>
       </div>
     </section>
   );
@@ -725,14 +621,8 @@ function AuthorityBody() {
     "ANPC — SAL/SOL",
   ];
   return (
-    <section
-      aria-labelledby="auth-heading"
-      className="mx-auto max-w-2xl px-4 py-10"
-    >
-      <h2
-        id="auth-heading"
-        className="mb-4 text-[11.5px] font-semibold uppercase tracking-[0.14em] text-ink-muted"
-      >
+    <section aria-labelledby="auth-heading" className="mx-auto max-w-2xl px-4 py-10">
+      <h2 id="auth-heading" className="mb-4 text-[11.5px] font-semibold uppercase tracking-[0.14em] text-ink-muted">
         Autorizați și înregistrați la
       </h2>
       <ul className="flex flex-wrap gap-2">
@@ -747,9 +637,8 @@ function AuthorityBody() {
         ))}
       </ul>
       <p className="mt-4 text-[12.5px] leading-relaxed text-ink-muted">
-        Echipa MediSafe reunește personal medical cu experiență cumulată de
-        peste 30 de ani în îngrijiri la domiciliu. Compania activează din 2017
-        sub Vital Medical Concept SRL.
+        Echipa MediSafe reunește personal medical cu experiență cumulată de peste 30 de ani în îngrijiri la domiciliu.
+        Compania activează din 2017 sub Vital Medical Concept SRL.
       </p>
     </section>
   );
@@ -778,18 +667,10 @@ function Faq() {
     },
   ];
   return (
-    <section
-      aria-labelledby="faq-heading"
-      className="mx-auto max-w-2xl px-4 py-10"
-    >
+    <section aria-labelledby="faq-heading" className="mx-auto max-w-2xl px-4 py-10">
       <header className="mb-6">
-        <p className="mb-2 text-[11.5px] font-semibold uppercase tracking-[0.14em] text-brand-deep">
-          Răspundem rapid
-        </p>
-        <h2
-          id="faq-heading"
-          className="font-display text-[1.75rem] font-extrabold leading-tight text-navy"
-        >
+        <p className="mb-2 text-[11.5px] font-semibold uppercase tracking-[0.14em] text-brand-deep">Răspundem rapid</p>
+        <h2 id="faq-heading" className="font-display text-[1.75rem] font-extrabold leading-tight text-navy">
           Întrebări frecvente
         </h2>
       </header>
@@ -802,8 +683,8 @@ function Faq() {
 
       <div className="mt-6 rounded-2xl border border-hairline bg-surface p-4">
         <p className="text-[13.5px] text-ink-muted">
-          Nu găsești răspunsul? Sună-ne și îți răspundem cu calm, fără să te
-          împingem să programezi ceva înainte să fim siguri că e ce-ți trebuie.
+          Nu găsești răspunsul? Sună-ne și îți răspundem cu calm, fără să te împingem să programezi ceva înainte să fim
+          siguri că e ce-ți trebuie.
         </p>
         <a
           href={`tel:${PHONE_TEL}`}
@@ -817,15 +698,7 @@ function Faq() {
   );
 }
 
-function FaqItem({
-  q,
-  a,
-  defaultOpen,
-}: {
-  q: string;
-  a: string;
-  defaultOpen?: boolean;
-}) {
+function FaqItem({ q, a, defaultOpen }: { q: string; a: string; defaultOpen?: boolean }) {
   const [open, setOpen] = useState(!!defaultOpen);
   return (
     <li className="overflow-hidden rounded-2xl border border-hairline bg-surface">
@@ -837,10 +710,7 @@ function FaqItem({
       >
         <span className="text-[14.5px] font-semibold text-navy">{q}</span>
         <ChevronDown
-          className={cn(
-            "h-4 w-4 shrink-0 text-ink-muted transition-transform duration-200",
-            open && "rotate-180",
-          )}
+          className={cn("h-4 w-4 shrink-0 text-ink-muted transition-transform duration-200", open && "rotate-180")}
         />
       </button>
       {open && (
@@ -866,63 +736,72 @@ function SiteFooter() {
           </span>
         </div>
         <p className="mt-3 max-w-md text-[13px] leading-relaxed text-white/70">
-          Servicii medicale la domiciliu, cu echipe proprii. Confirmăm
-          telefonic disponibilitatea, costul și pașii înainte ca echipa să
-          ajungă la tine.
+          Servicii medicale la domiciliu, cu echipe proprii. Confirmăm telefonic disponibilitatea, costul și pașii
+          înainte ca echipa să ajungă la tine.
         </p>
 
         <div className="mt-6 grid gap-4 sm:grid-cols-2">
           <div>
-            <h3 className="text-[11.5px] font-semibold uppercase tracking-[0.14em] text-brand">
-              Contact
-            </h3>
+            <h3 className="text-[11.5px] font-semibold uppercase tracking-[0.14em] text-brand">Contact</h3>
             <ul className="mt-3 space-y-2 text-[13.5px]">
               <li>
-                <a
-                  href={`tel:${PHONE_TEL}`}
-                  className="inline-flex items-center gap-2 font-semibold hover:underline"
-                >
+                <a href={`tel:${PHONE_TEL}`} className="inline-flex items-center gap-2 font-semibold hover:underline">
                   <Phone className="h-4 w-4" />
                   {PHONE_DISPLAY}
                 </a>
               </li>
               <li>
-                <a
-                  href={WHATSAPP_HREF}
-                  className="inline-flex items-center gap-2 hover:underline"
-                >
+                <a href={WHATSAPP_HREF} className="inline-flex items-center gap-2 hover:underline">
                   <MessageCircle className="h-4 w-4" />
                   WhatsApp
                 </a>
               </li>
               <li className="flex items-start gap-2 text-white/70">
                 <MapPin className="mt-0.5 h-4 w-4 shrink-0" />
-                <span>
-                  P-ța Națiunile Unite nr. 3–5, Sector 4, București
-                </span>
+                <span>P-ța Națiunile Unite nr. 3–5, Sector 4, București</span>
               </li>
             </ul>
           </div>
 
           <div>
-            <h3 className="text-[11.5px] font-semibold uppercase tracking-[0.14em] text-brand">
-              Despre noi
-            </h3>
+            <h3 className="text-[11.5px] font-semibold uppercase tracking-[0.14em] text-brand">Despre noi</h3>
             <ul className="mt-3 grid grid-cols-2 gap-x-3 gap-y-2 text-[13.5px] text-white/80">
-              <li><a href="#" className="hover:underline">Echipa</a></li>
-              <li><a href="#" className="hover:underline">Servicii</a></li>
-              <li><a href="#" className="hover:underline">Tarife</a></li>
-              <li><a href="#" className="hover:underline">Recenzii</a></li>
-              <li><a href="#" className="hover:underline">Întrebări</a></li>
-              <li><a href="#" className="hover:underline">Confidențialitate</a></li>
+              <li>
+                <a href="#" className="hover:underline">
+                  Echipa
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:underline">
+                  Servicii
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:underline">
+                  Tarife
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:underline">
+                  Recenzii
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:underline">
+                  Întrebări
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:underline">
+                  Confidențialitate
+                </a>
+              </li>
             </ul>
           </div>
         </div>
 
         <div className="mt-8 flex flex-wrap items-center justify-between gap-3 border-t border-white/10 pt-4 text-[11.5px] text-white/55">
-          <p>
-            © {new Date().getFullYear()} Vital Medical Concept SRL · CUI RO 38173670
-          </p>
+          <p>© {new Date().getFullYear()} Vital Medical Concept SRL · CUI RO 38173670</p>
           <p className="inline-flex items-center gap-1">
             <CalendarCheck className="h-3.5 w-3.5" />
             Activăm din 2017
@@ -932,4 +811,3 @@ function SiteFooter() {
     </footer>
   );
 }
-
