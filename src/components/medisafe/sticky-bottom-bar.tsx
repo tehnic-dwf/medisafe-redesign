@@ -1,4 +1,4 @@
-import { MessageCircle, Phone } from "lucide-react";
+import { Phone } from "lucide-react";
 import { useEffect, useState } from "react";
 import { PHONE_TEL, WHATSAPP_HREF } from "./data";
 import { cn } from "@/lib/utils";
